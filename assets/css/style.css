@@ -230,27 +230,44 @@ img {
     font-family: 'Exo2 Regular';
 }
 
-.btn-rounded:hover {
+.btn-rounded:hover, 
+.btn-rounded:focus, 
+.btn-rounded:active  {
     background-position: 100%;
     border: 1px #fff solid;
     color: #000;
     font-family: 'Exo2 Regular';
     transform: scaleX(0.99);
 }
-
-.content {
-    padding-top: 80px;
-}
-
 .btn-rounded-yellow {
     background-image: linear-gradient(45deg, transparent 50%, var(--bs-yellow) 50%);
     color: var(--bs-yellow);
     text-shadow: 0 0 black;
 }
 
-.btn-rounded-yellow:hover {
+.btn-rounded-yellow:hover, 
+.btn-rounded-yellow:focus, 
+.btn-rounded-yellow:active {
     color: #fff;
     text-shadow: 1px 0px black;
+}
+
+.btn-rounded-dark {
+    background-image: linear-gradient(45deg, transparent 50%, #212529 50%);
+    color: #212529;
+    text-shadow: 0 0 black;
+    border-color: #212529;
+}
+.btn-rounded-dark:hover,
+.btn-rounded-dark:focus 
+.btn-rounded-dark:active  {
+    color: #fff;
+    text-shadow: 1px 0px black;
+}
+
+
+.content {
+    padding-top: 80px;
 }
 
 .section-title {
@@ -273,6 +290,26 @@ img {
 .footer-logo {
     max-width: 320px;
     font-family: 'Exo2 Thin';
+}
+
+.form-control {
+    font-size: 14px;
+}
+
+.form-control::placeholder {
+    font-size: 14px;
+}
+
+.form-group label {
+    font-size: 14px;
+}
+.form-group label.error {
+    color: #dc3545;
+    margin-left: 5px;
+}
+.contato_mapa iframe {
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes header-scroll {
