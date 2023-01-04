@@ -1,0 +1,29 @@
+/* small */
+@media (max-width: 576px) { 
+}
+
+/* medium */
+@media (max-width: 768px) { 
+    .order-md-minus-one {
+        order: -1;
+    }
+    .quem-somos-img {
+        max-height: 350px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .quem-somos-img img {
+        width: 100%;
+        height: auto;
+        max-height: initial;
+    }
+}
+
+/* large */
+@media (max-width: 992px) { 
+}
+
+/* x large */
+@media (min-width: 993px) { 
+}

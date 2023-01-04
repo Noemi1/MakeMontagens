@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Montagens</title>
+
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <!-- nprogress -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" integrity="sha512-42kB9yDlYiCEfx2xVwq0q7hT4uf26FUgSIZBK8uiaEnTdShXjwr8Ip1V4xGJMg3mHkUt9nNuTDxunHF0/EgxLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js" integrity="sha512-bUg5gaqBVaXIJNuebamJ6uex//mjxPk8kljQTdM1SwkNrQD7pjS+PerntUSD+QRWPNJ0tq54/x4zRV8bLrLhZg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- slick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- aos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- site -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <script src="./assets/js/app.js" defer></script>
+
+</head>
+<body>
+
+    <header class="header">
+        <button class="btn btn-mobile">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="wrapper">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <img src="./assets/img/logo-white.png" alt="Make Montagens Logo">
+                </div>
+                <nav class="header__navigation">
+                    <a href="#home" class="header__navigation-link">Home</a>
+                    <a href="#quem-somos" class="header__navigation-link">Quem Somos</a>
+                    <a href="#servicos" class="header__navigation-link">Serviços</a>
+                    <a href="#atuacao" class="header__navigation-link">Área de Atuação</a>
+                    <a href="#clientes" class="header__navigation-link">Clientes</a>
+                    <a href="#contato" class="header__navigation-link">Contato</a>
+                    <!-- <a href="" class="header__navigation-link">Área Restrita</a> -->
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="banner" id="home">
+            <div class="banner__slider">
+                <div class="slider-item">
+                    <div class="slider-item-img" style="background-image: url(./assets/img/banner-1.jpg);">
+                        <div class="wrapper">
+                            <div class="banner-inner-content">
+                                <img src="./assets/img/logo-white.png" alt="Logo Make Montagens">
+                                <br>
+                                <div class="banner-content-text col-lg-12 col-10">
+                                    <h5 class="text-center">EXCELÊNCIA EM MONTAGENS INDUSTRIAIS E ELETROMÊCANICAS</h5>
+                                    <button class="btn btn-rounded border-warning mt-4 mx-auto d-block">Saiba mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider-item-img" style="background-image: url(./assets/img/banner-2.jpg);">
+                        <div class="wrapper">
+                            <div class="banner-inner-content d-flex flex-row">
+                                <div class="d-md-block d-none d-xl-block h-50 px-3" style="border-width: 2px;">
+                                    <img src="./assets/img/logo-icon-white.png" alt="">
+                                </div>
+                                <div class="border-end border-warning h-50 me-5 d-lg-block d-none"></div>
+                                <div class="banner-content-text col-xl-6 col-lg-5 col-md-6 col-sm-10 col-10">
+                                    <h2>Lorem ipsum dolor sit, amet</h2>
+                                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, tenetur sapiente similique asperiores illum voluptate accusamus quidem magni inventore? Nesciunt corporis eligendi distinctio laboriosam, alias debitis possimus deserunt molestiae natus.</p>
+                                    <button class="btn btn-rounded border-warning mt-3">Fale conosco</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider-item-img" style="background-image: url(./assets/img/banner-3.jpg);">
+                        <div class="wrapper">
+                            <div class="banner-inner-content">
+                                <div class="banner-content-text col-lg-12 col-10">
+                                    <h2 class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo</h2>
+                                    <hr class="border-bottom border-warning col-1 mx-auto my-4 opacity-100 rounded">
+                                    <p class="text-center">
+                                        <small>*Obs.: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat nam quis totam magnam cupiditate doloremque. Possimus harum inventore omnis </small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-arrow-down" href="#quem-somos">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+        <section class="content bg-light" id="quem-somos">
+            <div class="wrapper">
+                <div class="content-inner d-flex flex-wrap">
+                    <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12 d-lg-none d-md-block">
+                        <h3 class="section-title mt-lg-0 mt-4" data-aos="fade-right">Quem somos</h3>
+                        <hr class="border-bottom border-warning rounded col-1 my-3" data-aos="fade-right">
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 pe-4 quem-somos-img" data-aos="flip-right">
+                        <img src="./assets/img/quem-somos-2.jpg" alt="">
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
+                        <div class="d-lg-block d-none">
+                            <h3 class="section-title mt-lg-0 mt-4" data-aos="fade-right">Quem somos</h3>
+                            <hr class="border-bottom border-warning rounded col-1" data-aos="fade-right">
+                        </div>
+                        <br class="d-lg-none d-md-block">
+                        <p class="text-justify" data-aos="fade-right">Somos uma empresa do segmento de tubulação, metálica e mecânica, que já atuou em diversos projetos voltados aos setores alimentícios, petroquímicos, entre outros. </p>
+                        <p class="text-justify" data-aos="fade-right">Em 2014, quando ainda nomeada <strong>JS Almeida</strong>, no auge de uma crise economica nacional, a JS incluiu em sua gama de serviços a montagem e manutenção industrial.</p>
+                        <p class="text-justify" data-aos="fade-right">Foi quando surgiu a <strong>Make Montagens - Soluções Industriais</strong>, que desde então se consolidou no mercado industrial através da elaboração de projetos e da manutenção e montagem industrial.</p>
+                        <p data-aos="fade-right">
+                            <button class="btn btn-rounded btn-rounded-yellow border-warning mt-2">
+                                Conheça mais
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content" id="contato">
+            <div class="wrapper">
+                <div class="content__inner">
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" data-aos="fade-up">
+        <div class="wrapper">
+            <div class="footer__inner d-flex flex-wrap">
+                <div class="footer-logo col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12">
+                    <img src="./assets/img/logo-white.png" alt="Logo Make Montagens">
+                    <br>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>
+                        <span class="me-2"><i class="fa-solid fa-location-dot"></i></span>
+                        Av. Buturussu, 1750 - São Paulo, SP 03802-010
+                    </p>
+                </div>
+                <div class="footer-map col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3557157109594!2d-46.6079576!3d-23.591572399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bebffc7a77d%3A0xed2ddd6dc6f98e22!2sR.%20Xavier%20de%20Almeida%20-%20Ipiranga%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1672804691472!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="footer-media col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 my-auto">
+                    <p>
+                        <span class="media-icon me-2"><i class="fa-solid fa-phone"></i></span>
+                        (11) 2545-3836
+                    </p>
+                    <p>
+                        <span class="media-icon me-2"><i class="fa-brands fa-instagram"></i></span>
+                        instagram_media
+                    </p>
+                    <p>
+                        <span class="media-icon me-2"><i class="fa-solid fa-envelope"></i></span>
+                        contato@makemontagens.com.br
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
