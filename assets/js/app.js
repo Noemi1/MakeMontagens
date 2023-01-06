@@ -116,7 +116,7 @@ function setHeaderScroll() {
 }
 
 function dotsSlider() {
-    $('.atuacao-slider .slick-dots li:nth-child(1) button').html('<img src="./assets/img/icon-slide-next.png" />')
+    $('.atuacao-slider .slick-dots li:nth-child(1) button').html('<img src="./assets/img/icon-slide-logo.png" />')
     $('.atuacao-slider .slick-dots li:nth-child(2) button').html('<img src="./assets/img/icon-slide-metalica.png" />')
     $('.atuacao-slider .slick-dots li:nth-child(3) button').html('<img src="./assets/img/icon-slide-tubulacao.png" />')
     $('.atuacao-slider .slick-dots li:nth-child(4) button').html('<img src="./assets/img/icon-slide-eletrica.png" />')
@@ -192,7 +192,7 @@ function servicosSlick() {
 }
 
 function toggleHeaderNavigation() {
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 992) {
         $('.header').toggleClass('toggle');
     }
 }
