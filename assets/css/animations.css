@@ -1,0 +1,62 @@
+
+@keyframes cliente-logo-to-right {
+    from {
+        transform: translateX(0%)
+    }
+
+    to {
+        transform: translateX(100%)
+    }
+}
+
+@keyframes cliente-logo-to-down {
+    from {
+        transform: translateY(0%)
+    }
+
+    to {
+        transform: translateY(100%)
+    }
+}
+
+@keyframes cliente-logo-to-left {
+    from {
+        transform: translateX(0%)
+    }
+
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes cliente-logo-to-up {
+    from {
+        transform: translateY(0%)
+    }
+
+    to {
+        transform: translateY(-100%)
+    }
+}
+
+@keyframes header-scroll {
+    from {
+        transform: translateY(-100%);
+        transition: .3s
+    }
+
+    to {
+        transform: translateY(0%);
+        transition: .3s
+    }
+}
+
+@keyframes banner-logo {
+    from {
+        max-width: 500px;
+    }
+
+    to {
+        max-width: 800px;
+    }
+}

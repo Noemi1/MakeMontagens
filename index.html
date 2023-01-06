@@ -32,18 +32,22 @@
     <!-- site -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/animations.css">
     <script src="./assets/js/app.js" defer></script>
 </head>
 
 <body>
     <header class="header">
-        <button class="btn btn-mobile"><span></span><span></span><span></span></button>
+        <button class="btn btn-mobile" onclick="toggleHeaderNavigation()"><span></span><span></span><span></span></button>
         <div class="wrapper">
             <div class="header__inner">
                 <div class="header__navigation-link header__logo" data-sectionid="#home">
                     <img src="./assets/img/logo-white.png" alt="Make Montagens Logo">
                 </div>
                 <nav class="header__navigation">
+                    <div class="header__navigation-link header__logo d-lg-none d-block" data-sectionid="#home">
+                        <img src="./assets/img/logo-white.png" alt="Make Montagens Logo">
+                    </div>
                     <a data-sectionid="#home" class="header__navigation-link">Home</a>
                     <a data-sectionid="#quem-somos" class="header__navigation-link">Quem Somos</a>
                     <a data-sectionid="#servicos" class="header__navigation-link">Serviços</a>
@@ -112,14 +116,14 @@
         <section class="content bg-light" id="quem-somos">
             <div class="wrapper">
                 <div class="content-inner d-flex flex-wrap">
-                    <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12 d-lg-none d-md-block">
+                    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 d-lg-none d-block">
                         <h3 class="section-title mt-lg-0 mt-4" data-aos="fade-right">Quem somos</h3>
                         <hr class="border-bottom border-warning rounded col-1 my-3" data-aos="fade-right">
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 pe-4 quem-somos-img" data-aos="flip-right">
                         <img src="./assets/img/quem-somos.jpg" alt="">
                     </div>
-                    <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
+                    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
                         <div class="d-lg-block d-none">
                             <h3 class="section-title mt-lg-0 mt-4" data-aos="fade-right">Quem somos</h3>
                             <hr class="border-bottom border-warning rounded col-1" data-aos="fade-right">
@@ -236,13 +240,14 @@
             <div class="atuacao-slider">
                 <div class="atuacao-slider-item slide-1">
                     <div class="atuacao-item-bg"></div>
-                    <div class="align-items-center d-flex h-100 justify-content-center">
+                    <div class=" d-flex justify-content-center align-items-center align-content-center flex-wrap h-100 px-5">
                         <div class="atuacao-item-img">
                             <img src="./assets/img/logo-icon-white.png" alt="Logo" class="logo">
                         </div>
-                        <div class="atuacao-item-text">
+                        <div class="atuacao-item-text border-top border-start-0 border-md-top-0 border-md-start border-white">
                             <h3>Areas de Atuação</h3>
-                            <p class="subtitle"> Conheça a gama de serviços disponíveis para sua empresa. <span class="arrow-icon">
+                            <p class="subtitle col-xl-12 col-lg-12 col-md-12 col-sm-11 col-11"> Conheça a gama de serviços disponíveis para sua empresa. 
+                                <span class="arrow-icon d-md-block d-none">
                                     <span></span><span></span><span></span><span></span>
                                 </span>
                             </p>
@@ -252,7 +257,7 @@
                 <div class="atuacao-slider-item slide-2">
                     <div class="w-100 h-100 d-flex">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="atuacao-slider-item-img" style="background-image: url(./assets/img/atuacao-metalica.jpeg);"></div>
+                            <div class="atuacao-slider-item-img" style="background-image: url(./assets/img/atuacao-metalica.jpg);"></div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center bg-dark ">
                             <div class="atuacao-slider-item-text text-white">
@@ -261,6 +266,9 @@
                                 <p data-aos="fade-right" class="text-thin">Estrutura metálica – Projeto detalhado para fabricação;</p>
                                 <p data-aos="fade-right" class="text-thin">Memorial de cálculo estrutural por elementos finitos;</p>
                                 <p data-aos="fade-right" class="text-thin">Fornecimento, Fabricação e montagem de estruturas metálicas.</p>
+                                <p data-aos="fade-right">                                    
+                                    <a href="./metalica.html" class="btn btn-rounded border-warning mt-3"><small>VER MAIS</small></a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -281,6 +289,9 @@
                                 <p data-aos="fade-left" class="text-thin">Análise de flexibilidade;</p>
                                 <p data-aos="fade-left" class="text-thin">Projeto detalhado de tubulação;</p>
                                 <p data-aos="fade-left" class="text-thin">Fabricação, montagem, inspeção e T.H.</p>
+                                <p data-aos="fade-left">                                    
+                                    <a href="./tubulacao-e-mecanica.html" class="btn btn-rounded border-warning mt-3"><small>VER MAIS</small></a>
+                                </p>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -302,17 +313,20 @@
                                 <p data-aos="fade-right">Instalação de sistemas iluminação e tomadas, aterramento e SPDA;</p>
                                 <p data-aos="fade-right">Arquitetura de rede para motores elétricos;</p>
                                 <p data-aos="fade-right">Comandos e CLPs.</p>
+                                <p data-aos="fade-right">                                    
+                                    <a href="./eletrica.html" class="btn btn-rounded border-warning mt-3"><small>VER MAIS</small></a>
+                                </p>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="atuacao-slider-item-img" style="background-image: url(./assets/img/atuacao-eletrica.jpeg);"></div>
+                            <div class="atuacao-slider-item-img" style="background-image: url(./assets/img/atuacao-eletrica.jpg);"></div>
                         </div>
                     </div>
                 </div>
                 <div class="atuacao-slider-item slide-5">
                     <div class="w-100 h-100 d-flex">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="atuacao-slider-item-img" style="background-image: url(./assets/img/atuacao-civil.jpeg);"></div>
+                            <div class="atuacao-slider-item-img" style="background-image: url(./assets/img/atuacao-civil.jpg);"></div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center bg-dark text-white text-thin">
                             <div class="atuacao-slider-item-text">
@@ -323,6 +337,9 @@
                                 <p data-aos="fade-right">Dimensionamento estrutural (concreto Armado e Aço);</p>
                                 <p data-aos="fade-right">Estrutura de concreto armado – Projeto detalhado de peças e armadura;</p>
                                 <p data-aos="fade-right">Desenvolvimento de layouts em geral.</p>
+                                <p data-aos="fade-right">                                    
+                                    <a href="./construcao-civil.html" class="btn btn-rounded border-warning mt-3"><small>VER MAIS</small></a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -341,31 +358,14 @@
                                 <p data-aos="fade-right">Elaboração de Maquetes Eletrônicas;</p>
                                 <p data-aos="fade-right">Criação de Vídeos Institucionais;</p>
                                 <p data-aos="fade-right">Renderização de Vídeos e Imagens Realistas.</p>
+                                <p data-aos="fade-right">                                    
+                                    <a href="./projetos-industriais.html" class="btn btn-rounded border-warning mt-3"><small>VER MAIS</small></a>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="atuacao-nav">
-                <button class="atuacao-nav-item">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-                <button class="atuacao-nav-item">
-                    <img src="./assets/img/servico-icon-metalica.png">
-                </button>
-                <button class="atuacao-nav-item">
-                    <i class="fa-solid fa-wrench"></i>
-                </button>
-                <button class="atuacao-nav-item">
-                    <i class="fa-solid fa-bolt"></i>
-                </button>
-                <button class="atuacao-nav-item">
-                    <img src="./assets/img/servico-icon-civil.png">
-                </button>
-                <button class="atuacao-nav-item">
-                    <img src="./assets/img/servico-icon-projetos.png">
-                </button>
-            </div> -->
         </section>
         <section class="" id="clientes">
             <div class="bg-dark content">
@@ -407,7 +407,12 @@
                         </div>
                         <div class="col-8 cliente-item-center">
                             <div class="cliente-item-center-text col-lg-10 col-12 mx-auto">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore accusamus eligendi fuga dicta quo sunt sint magni aperiam asperiores quis eveniet architecto suscipit quaerat enim maiores, dolorem libero iste ratione!</p>
+                                <h4>Experiência em que você pode confiar</h4>
+                                <p>
+                                    Nossos clientes têm a certeza de sempre poder contar conosco.
+                                    <br> 
+                                    É através da satisfação de clientes que temos a certeza de que estamos desenvolvendo aqui um trabalho de qualidade, respeito e muita dedicação.
+                                </p>
                             </div>
                         </div>
                         <div class="col-2">
@@ -442,7 +447,7 @@
                 </div>
             </div>
         </section>
-        <section class="d-flex flex-wrap align-items-center" id="contato" data-aos="fade-down">
+        <section class="d-flex flex-wrap align-items-stretch" id="contato" data-aos="fade-down">
             <form class="contato_form col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 px-5 bg-light py-4">
                 <h3 class="section-title mb-0 pb-0">Fale conosco</h3>
                 <p class="mb-0 text-font-light">Escreva sua mensagem para falar conosco. Entraremos em contato pelo email ou telefone cadastrados abaixo.</p>
@@ -528,16 +533,28 @@
                 <div class="footer-map col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3557157109594!2d-46.6079576!3d-23.591572399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bebffc7a77d%3A0xed2ddd6dc6f98e22!2sR.%20Xavier%20de%20Almeida%20-%20Ipiranga%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1672804691472!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="footer-media col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 my-auto">
-                    <p>
-                        <span class="media-icon me-2"><i class="fa-solid fa-phone"></i></span> (11) 2545-3836
+                <div class="footer-media d-flex flex-column col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 my-auto">
+                    <a href="tel:+551125453836">
+                        <span class="media-icon me-2">
+                            <i class="fa-solid fa-phone"></i>
+                        </span> (11) 2545-3836
+                    </a>
+                    <a href="https://www.instagram.com/makemontagens/">
+                        <span class="media-icon me-2">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span> makemontagens
+                    </a>
+                    <a href="mailto:contato@makemontagens.com.br">
+                        <span class="media-icon me-2">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span> contato@makemontagens.com.br
+                    </a>
                     </p>
-                    <p>
-                        <span class="media-icon me-2"><i class="fa-brands fa-instagram"></i></span> instagram_media
-                    </p>
-                    <p>
-                        <span class="media-icon me-2"><i class="fa-solid fa-envelope"></i></span> contato@makemontagens.com.br
-                    </p>
+                    <a href="https://br.linkedin.com/company/make-montagens-instalações-industriais/">
+                        <span class="media-icon me-2">
+                            <i class="fab fa-linkedin-in"></i>
+                        </span> https://br.linkedin.com/company/make-montagens-instalações-industriais/
+                    </a>
                 </div>
             </div>
         </div>
