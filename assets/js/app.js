@@ -9,6 +9,10 @@ $(window).on('load', function() {
             goToSection(sectionId)
     }, 500);
 
+    setTimeout(() => {
+        AOS.refresh();
+    }, 5000);
+
     servicosSlider();
     bannerSlider();
     modalSlider();
@@ -106,12 +110,6 @@ $(window).on('load', function() {
     }, 2000);
 
 
-
-    setTimeout(() => {
-        NProgress.done();
-        $('.loading').remove();
-    }, 300);
-
     $(window).on('resize', function (e) {
         var size = 250 + (1500 - 250) * (($(window).width - 500) / (1920 - 500));
         $('.clientes').css({
@@ -123,7 +121,13 @@ $(window).on('load', function() {
         atuacaoSlider();
         dotsSlider();
     })
-    AOS.refresh();
+
+
+    setTimeout(() => {
+        NProgress.done();
+        $('.loading').remove();
+        AOS.refresh();
+    }, 300);
 });
 
 function setScrollPosition(sections) {
@@ -189,6 +193,7 @@ function atuacaoSlider() {
         var dotsList = $('.atuacao-slider .slick-dots').offset().left;
         var positionList = dotAtivo - dotsList;
         $('.atuacao-slider .slick-dots').css('transform', 'translateX(-' + positionList + 'px)');
+        AOS.refresh();
     });
 }
 
