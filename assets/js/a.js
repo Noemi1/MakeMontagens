@@ -1,19 +1,26 @@
 NProgress.start();
 
 $(window).on('load', function() {
-    AOS.init();
-
-    setTimeout(() => {
-        var sectionId = localStorage.getItem('sectionId')
-        if ($(sectionId).length > 0)
-            goToSection(sectionId)
-    }, 500);
 
     servicosSlider();
     bannerSlider();
     modalSlider();
     atuacaoSlider();
     dotsSlider();
+    
+    AOS.init();
+    
+    window.addEventListener('load', function() {
+        AOS.refresh();
+
+    })
+
+
+    setTimeout(() => {
+        var sectionId = localStorage.getItem('sectionId')
+        if ($(sectionId).length > 0)
+            goToSection(sectionId)
+    }, 500);
 
 
     let sections = []; 
@@ -124,6 +131,7 @@ $(window).on('load', function() {
         dotsSlider();
     })
     AOS.refresh();
+
 });
 
 function setScrollPosition(sections) {
@@ -173,6 +181,8 @@ function atuacaoSlider() {
     } catch (e) {
 
     }
+
+    console.log( $('.atuacao-slider'))
     $('.atuacao-slider').slick({
         arrows: true,
         dots: true,
@@ -216,6 +226,7 @@ function setSlickItemVisible(slickParent, currentSlide) {
 }
 
 function validaTelefoneCelular(val) {
+    console.log(val, val.length);
     if (!val.trim()) {
         return 'Esse campo é obrigatório';
     }
@@ -258,12 +269,6 @@ function servicosSlider() {
     } catch (e) {
 
     }
-       $('.servicos-nav').on('init', function (slick, currentSlide) {
-        setSlickItemVisible(slick, currentSlide)
-    });
-    $('.servicos-nav').on('afterChange', function (slick, currentSlide) {
-        setSlickItemVisible(slick, currentSlide)
-    });
     // Serviços
     $('.servicos-for').slick({
         slidesToShow: 1,
@@ -284,8 +289,12 @@ function servicosSlider() {
         centerMode: $(window).width() > 900,
         variableWidth: $(window).width() > 900,
     });
-    // setSlickItemVisible($('.servicos-nav'), currentSlide)
- 
+    $('.servicos-nav').on('init', function (slick, currentSlide) {
+        setSlickItemVisible(slick, currentSlide)
+    });
+    $('.servicos-nav').on('afterChange', function (slick, currentSlide) {
+        setSlickItemVisible(slick, currentSlide)
+    });
 
 }
 
@@ -322,6 +331,7 @@ function openModal() {
 }
 
 function goToSection(sectionId) {
+    console.log(sectionId)
     if ($(sectionId).length > 0) {
         localStorage.setItem('sectionId', sectionId)
         let position = $(sectionId).offset().top;
@@ -330,6 +340,9 @@ function goToSection(sectionId) {
         let newPosition = sectionId == '#atuacao' ?
         position : position - header < 0 ?
         0 : position - header;
+        console.log(newPosition)
+        console.log(position - header)
+        console.log(position - header < 0)
         $("html, body").stop().animate({
             scrollTop: newPosition
         }, 500);
