@@ -172,7 +172,7 @@ img {
 
 .banner {
     position: relative;
-    border: red;
+    /* border: red; */
 }
 
 .banner__slider {
@@ -799,7 +799,9 @@ img {
     /* min-height: calc(100vh - 50px); */
     margin-bottom: 0;
 }
-
+.banner__slider .slick-list, .banner__slider .slick-track{
+ height: 100%;
+}
 .atuacao-slider-item {
     position: relative;
 }

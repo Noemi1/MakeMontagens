@@ -132,6 +132,7 @@ function bannerSlider() {
         arrows: true,
         dots: false,
         infinite: false,
+        adaptiveHeight: false,
         slidesToShow: 1,
         slidesToScroll: 1,
     });
