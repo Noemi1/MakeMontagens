@@ -53,10 +53,22 @@
 
 @keyframes banner-logo {
     from {
-        max-width: 500px;
+        max-width: 400px;
     }
 
     to {
-        max-width: 800px;
+        max-width: 600px;
+    }
+}
+
+
+
+
+@keyframes loadingBlinking {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

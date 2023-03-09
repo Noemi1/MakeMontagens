@@ -7,7 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria - Make Montagens</title>
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jquery form -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+    <!-- jquery validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.js"></script>
+    <!-- jquery mask -->
+    <script src="./assets/libs/jquery-mask/jquery.mask.js"></script>
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -15,8 +23,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!-- nprogress -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" integrity="sha512-42kB9yDlYiCEfx2xVwq0q7hT4uf26FUgSIZBK8uiaEnTdShXjwr8Ip1V4xGJMg3mHkUt9nNuTDxunHF0/EgxLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js" integrity="sha512-bUg5gaqBVaXIJNuebamJ6uex//mjxPk8kljQTdM1SwkNrQD7pjS+PerntUSD+QRWPNJ0tq54/x4zRV8bLrLhZg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./assets/libs/nprogress/nprogress.css" />
+    <script src="./assets/libs/nprogress/nprogress.min.js"></script>
     <!-- slick -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
@@ -24,23 +32,21 @@
     <!-- aos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- jquery validation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.js"></script>
-    <!-- jquery mask -->
-    <script src="./assets/libs/jquery-mask/jquery.mask.js"></script>
+    <!-- Toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- site -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/animations.css">
     <script src="./assets/js/app.js" defer></script>
 </head>
-
 <body>
     <header class="header header-dark">
         <button class="btn btn-mobile"><span></span><span></span><span></span></button>
         <div class="wrapper">
             <div class="header__inner">
-                <a class="header__navigation-link header__logo"  href="../">
+                <a class="header__navigation-link header__logo" href="../">
                     <img src="./assets/img/logo-white.png" alt="Make Montagens Logo">
                 </a>
                 <nav class="header__navigation">
@@ -50,57 +56,60 @@
         </div>
     </header>
     <main class="main" id="home">
-        <section class="content">
+        <section class="content content-padding">
             <div class="wrapper">
-                <h3 class="section-title mt-lg-0 mt-4 text-center" data-aos="fade-down">Nossos Serviços</h3>
-                <h5 class="section-title mt-lg-0 mt-4 text-center" data-aos="fade-down">Tubulação e Mecânica</h5>
+                <h5 class="section-title mt-lg-0 mt-4 text-center" data-aos="fade-down">Nossos Serviços</h5>
+                <h2 class="section-title mt-lg-0 mt-4 text-center" data-aos="fade-down">Tubulação e Mecânica</h2>
                 <hr class="border-bottom border-warning rounded col-1 my-3 mx-auto" data-aos="fade-down">
                 <p data-aos="fade-down" class="text-center col-8 mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo quam delectus amet neque. Dolore, perferendis vero saepe a, vitae non quod, qui culpa consequuntur earum explicabo porro fuga quidem ipsa!</p>
-                <div class="d-flex flex-wrap justify-content-center galeria">
+                <div class="galeria">
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-1.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-1.jpg" alt="Tubulação e Mecânica">
                     </div>
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-2.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-2.jpg" alt="Tubulação e Mecânica">
                     </div>
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-3.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-3.jpg" alt="Tubulação e Mecânica">
                     </div>
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-4.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-4.jpg" alt="Tubulação e Mecânica">
                     </div>
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-5.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-5.jpg" alt="Tubulação e Mecânica">
                     </div>
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-6.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-6.jpg" alt="Tubulação e Mecânica">
                     </div>
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-7.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-7.jpg" alt="Tubulação e Mecânica">
                     </div>
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-8.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-8.jpg" alt="Tubulação e Mecânica">
                     </div>
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-9.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-9.jpg" alt="Tubulação e Mecânica">
                     </div>
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-10.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-10.jpg" alt="Tubulação e Mecânica">
                     </div>
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-11.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-11.jpg" alt="Tubulação e Mecânica">
                     </div>
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-12.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-12.jpg" alt="Tubulação e Mecânica">
                     </div>
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-13.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-13.jpg" alt="Tubulação e Mecânica">
                     </div>
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-14.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-14.jpg" alt="Tubulação e Mecânica">
                     </div>
                     <div class="galeria-item" data-aos="fade-down">
-                        <img src="./assets/img/tubulacao-15.jpg" alt="">
+                        <img src="./assets/img/tubulacao-e-mecanica/tubulacao-15.jpg" alt="Tubulação e Mecânica">
+                    </div>
+                    <div class="col-md-3 d-flex align-items-center justify-content-center" data-aos="fade-down">
+                        <img class="col-8" src="./assets/img/logo.png" alt="" srcset="">
                     </div>
                 </div>
             </div>
@@ -110,7 +119,99 @@
                 <span></span><span></span>
             </button>
             <div class="modal-bg"></div>
-            <div class="modal-inner">
+            <div class="modal-inner modal-inner-galeria">
+                <div class="modal-galeria">
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg/v1/fit/w_776,h_513,q_90/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg/v1/fit/w_1552,h_1026,q_90/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg/v1/fit/w_2328,h_1539,q_90/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg/v1/fit/w_3104,h_2052,q_90/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg/v1/fit/w_3880,h_2565,q_90/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg/v1/fit/w_776,h_513,q_90/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg/v1/fit/w_1552,h_1026,q_90/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg/v1/fit/w_2328,h_1539,q_90/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg/v1/fit/w_3104,h_2052,q_90/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg/v1/fit/w_3880,h_2565,q_90/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="0" src="https://static.wixstatic.com/media/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg/v1/fit/w_776,h_513,q_90/d2f0c8_fdb92a61356344cfba0b09d85861886f~mv2.jpg" loading="eager" style="width: 684px; height: 513px;">
+                        </picture>
+                    </div>
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg/v1/fit/w_1552,h_392,q_90/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg/v1/fit/w_2328,h_588,q_90/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg/v1/fit/w_3104,h_784,q_90/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg/v1/fit/w_3880,h_980,q_90/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg/v1/fit/w_1552,h_392,q_90/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg/v1/fit/w_2328,h_588,q_90/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg/v1/fit/w_3104,h_784,q_90/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg/v1/fit/w_3880,h_980,q_90/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="1" src="https://static.wixstatic.com/media/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_7b701b468a374d69832e665b1cc41432~mv2.jpg" loading="eager" style="width: 261.333px; height: 196px;">
+                        </picture>
+                    </div>
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg/v1/fit/w_1552,h_392,q_90/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg/v1/fit/w_2328,h_588,q_90/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg/v1/fit/w_3104,h_784,q_90/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg/v1/fit/w_3880,h_980,q_90/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg/v1/fit/w_1552,h_392,q_90/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg/v1/fit/w_2328,h_588,q_90/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg/v1/fit/w_3104,h_784,q_90/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg/v1/fit/w_3880,h_980,q_90/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="2" src="https://static.wixstatic.com/media/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_7ae01a88eef346e9b9bd18c5de4c5570~mv2.jpg" loading="eager" style="width: 261.333px; height: 196px;">
+                        </picture>
+                    </div>
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg/v1/fit/w_1552,h_392,q_90/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg/v1/fit/w_1752,h_442,q_90/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg/v1/fit/w_1752,h_442,q_90/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg/v1/fit/w_1752,h_442,q_90/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg/v1/fit/w_1552,h_392,q_90/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg/v1/fit/w_1752,h_442,q_90/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg/v1/fit/w_1752,h_442,q_90/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg/v1/fit/w_1752,h_442,q_90/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="3" src="https://static.wixstatic.com/media/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_582a9d98587444d3a3d71213f8d85217~mv2.jpg" loading="eager" style="width: 413.993px; height: 196px;">
+                        </picture>
+                    </div>
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg/v1/fit/w_1552,h_392,q_90/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg/v1/fit/w_1752,h_442,q_90/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg/v1/fit/w_1752,h_442,q_90/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg/v1/fit/w_1752,h_442,q_90/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg/v1/fit/w_1552,h_392,q_90/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg/v1/fit/w_1752,h_442,q_90/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg/v1/fit/w_1752,h_442,q_90/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg/v1/fit/w_1752,h_442,q_90/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="4" src="https://static.wixstatic.com/media/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_c6fb13bee9e34d0bac333bed832fc01d~mv2.jpg" loading="eager" style="width: 413.993px; height: 196px;">
+                        </picture>
+                    </div>
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg/v1/fit/w_720,h_196,q_90/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg/v1/fit/w_1440,h_392,q_90/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg/v1/fit/w_720,h_196,q_90/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg/v1/fit/w_1440,h_392,q_90/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="5" src="https://static.wixstatic.com/media/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg/v1/fit/w_720,h_196,q_90/d2f0c8_d076800c6ed44f8789ac506a8bb7ea25~mv2.jpg" loading="eager" style="width: 110.25px; height: 196px;">
+                        </picture>
+                    </div>
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg/v1/fit/w_720,h_196,q_90/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg/v1/fit/w_1440,h_392,q_90/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg/v1/fit/w_720,h_196,q_90/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg/v1/fit/w_1440,h_392,q_90/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="6" src="https://static.wixstatic.com/media/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg/v1/fit/w_720,h_196,q_90/d2f0c8_8a68c105c6574cf4acc8c1bc9cfcf6ab~mv2.jpg" loading="eager" style="width: 110.25px; height: 196px;">
+                        </picture>
+                    </div>
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg/v1/fit/w_720,h_196,q_90/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg/v1/fit/w_1440,h_392,q_90/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg/v1/fit/w_720,h_196,q_90/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg/v1/fit/w_1440,h_392,q_90/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="7" src="https://static.wixstatic.com/media/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg/v1/fit/w_720,h_196,q_90/d2f0c8_e94d3f6926f24d50ba9fcce1d0aef096~mv2.jpg" loading="eager" style="width: 110.25px; height: 196px;">
+                        </picture>
+                    </div>
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg/v1/fit/w_1552,h_392,q_90/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg/v1/fit/w_1910,h_482,q_90/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg/v1/fit/w_1910,h_482,q_90/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg/v1/fit/w_1910,h_482,q_90/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg/v1/fit/w_1552,h_392,q_90/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg/v1/fit/w_1910,h_482,q_90/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg/v1/fit/w_1910,h_482,q_90/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg/v1/fit/w_1910,h_482,q_90/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="8" src="https://static.wixstatic.com/media/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_d1a8765922254092b7657dc5a0d06f88~mv2.jpg" loading="eager" style="width: 348.444px; height: 196px;">
+                        </picture>
+                    </div>
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg/v1/fit/w_720,h_196,q_90/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg/v1/fit/w_1440,h_392,q_90/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg/v1/fit/w_720,h_196,q_90/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg/v1/fit/w_1440,h_392,q_90/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg/v1/fit/w_1839,h_500,q_90/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="9" src="https://static.wixstatic.com/media/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg/v1/fit/w_720,h_196,q_90/d2f0c8_b7fce59fa4364e4e9f21a2d8dd0e048b~mv2.jpg" loading="eager" style="width: 110.25px; height: 196px;">
+                        </picture>
+                    </div>
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg/v1/fit/w_1540,h_388,q_90/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg/v1/fit/w_1540,h_388,q_90/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg/v1/fit/w_1540,h_388,q_90/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg/v1/fit/w_1540,h_388,q_90/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg/v1/fit/w_1540,h_388,q_90/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg/v1/fit/w_1540,h_388,q_90/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg/v1/fit/w_1540,h_388,q_90/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg/v1/fit/w_1540,h_388,q_90/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="10" src="https://static.wixstatic.com/media/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_4aeb8d2c6a064d6e9b004a2ca3142ac9~mv2.jpg" loading="eager" style="width: 348.145px; height: 196px;">
+                        </picture>
+                    </div>
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg/v1/fit/w_1552,h_392,q_90/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg/v1/fit/w_2328,h_588,q_90/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg/v1/fit/w_3104,h_784,q_90/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg/v1/fit/w_3880,h_980,q_90/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg/v1/fit/w_1552,h_392,q_90/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg/v1/fit/w_2328,h_588,q_90/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg/v1/fit/w_3104,h_784,q_90/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg/v1/fit/w_3880,h_980,q_90/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="11" src="https://static.wixstatic.com/media/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_27706cd44d53458d89a20af4f40b8128~mv2.jpg" loading="eager" style="width: 261.333px; height: 196px;">
+                        </picture>
+                    </div>
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg/v1/fit/w_774,h_196,q_90/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg/v1/fit/w_1548,h_392,q_90/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg/v1/fit/w_1776,h_449,q_90/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg/v1/fit/w_1776,h_449,q_90/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg/v1/fit/w_1776,h_449,q_90/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg/v1/fit/w_774,h_196,q_90/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg/v1/fit/w_1548,h_392,q_90/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg/v1/fit/w_1776,h_449,q_90/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg/v1/fit/w_1776,h_449,q_90/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg/v1/fit/w_1776,h_449,q_90/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="12" src="https://static.wixstatic.com/media/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg/v1/fit/w_774,h_196,q_90/d2f0c8_6f2557de62e84b5d975caa9ad57f6b6c~mv2.jpg" loading="eager" style="width: 147px; height: 196px;">
+                        </picture>
+                    </div>
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg/v1/fit/w_1552,h_392,q_90/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg/v1/fit/w_1778,h_449,q_90/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg/v1/fit/w_1778,h_449,q_90/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg/v1/fit/w_1778,h_449,q_90/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg/v1/fit/w_1552,h_392,q_90/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg/v1/fit/w_1778,h_449,q_90/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg/v1/fit/w_1778,h_449,q_90/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg/v1/fit/w_1778,h_449,q_90/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="13" src="https://static.wixstatic.com/media/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg/v1/fit/w_776,h_196,q_90/d2f0c8_b6d0ea778aae4209a60410b84f5b9c79~mv2.jpg" loading="eager" style="width: 261.333px; height: 196px;">
+                        </picture>
+                    </div>
+                    <div class="modal-galeria-item">
+                        <picture id="multi_picture_undefined">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg/v1/fit/w_774,h_196,q_90/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.webp 1x, https://static.wixstatic.com/media/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg/v1/fit/w_1548,h_392,q_90/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.webp 2x, https://static.wixstatic.com/media/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg/v1/fit/w_1776,h_449,q_90/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.webp 3x, https://static.wixstatic.com/media/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg/v1/fit/w_1776,h_449,q_90/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.webp 4x, https://static.wixstatic.com/media/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg/v1/fit/w_1776,h_449,q_90/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.webp 5x" type="image/webp">
+                            <source srcset="https://static.wixstatic.com/media/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg/v1/fit/w_774,h_196,q_90/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg 1x, https://static.wixstatic.com/media/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg/v1/fit/w_1548,h_392,q_90/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg 2x, https://static.wixstatic.com/media/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg/v1/fit/w_1776,h_449,q_90/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg 3x, https://static.wixstatic.com/media/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg/v1/fit/w_1776,h_449,q_90/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg 4x, https://static.wixstatic.com/media/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg/v1/fit/w_1776,h_449,q_90/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg 5x" type="image/jpeg"><img alt="Tubulação e Mecânica" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="14" src="https://static.wixstatic.com/media/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg/v1/fit/w_774,h_196,q_90/d2f0c8_190e3aef88544620b60efb0402c9eecb~mv2.jpg" loading="eager" style="width: 147px; height: 196px;">
+                        </picture>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -127,7 +228,9 @@
                     </p>
                 </div>
                 <div class="footer-map col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3557157109594!2d-46.6079576!3d-23.591572399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bebffc7a77d%3A0xed2ddd6dc6f98e22!2sR.%20Xavier%20de%20Almeida%20-%20Ipiranga%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1672804691472!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3557157109594!2d-46.6079576!3d-23.591572399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bebffc7a77d%3A0xed2ddd6dc6f98e22!2sR.%20Xavier%20de%20Almeida%20-%20Ipiranga%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1672804691472!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0749202843103!2d-46.4819945!3d-23.4938108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6055c4cf3ccd%3A0xc95bab663343e814!2sAv.%20Boturussu%2C%201750%20-%20Parque%20Boturussu%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003802-010!5e0!3m2!1spt-BR!2sbr!4v1678124174442!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="footer-media col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 my-auto">
                     <p>

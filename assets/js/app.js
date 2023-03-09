@@ -1,9 +1,11 @@
+NProgress.start();
+
 $(document).ready(function () {
     AOS.init();
 
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         AOS.refresh();
-        servicosSlick();
+        servicosSlider();
     });
 
     setTimeout(() => {
@@ -18,21 +20,20 @@ $(document).ready(function () {
         setHeaderScroll();
     });
 
-    $(document.body).on('touchmove', setHeaderScroll)
+    $(document.body).on('touchmove', setHeaderScroll);
 
     // banner slick
-    $('.banner__slider').slick({
-        arrows: true,
-        dots: false,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    });
+
     $('#telefoneCelular').mask('(00) 0000-00000', {
         onKeyPress: function (value, e, field, options) {
             var masks = ['(00) 0000-00000', '(00) 0.0000-0000'];
             var mask = (value.length >= 15) ? masks[1] : masks[0];
             $(field).mask(mask, options);
+            validator.element($(field))
+        },
+        onInvalid: function (val, e, f, invalid, options) {
+            $('#telefoneCelular-error').css('display', 'block');
+            $('#telefoneCelular-error').html('Letras e caracteres especiais não são válidos.')
         }
     });
     // form validation
@@ -42,14 +43,23 @@ $(document).ready(function () {
     });
     let validator = $('.contato_form').validate({
         submitHandler: function (form) {
-
+            toastr.success('Sua mensagem foi enviada com sucesso!');
+            toastr.success('Aguarde nosso retorno em algumas horas.');
+            $('#contactForm').trigger("reset");
         }
     });
     $('.contato_form').find('.form-control').on('blur', function () {
+        $(this).val($(this).val().trim())
+        if ($(this).attr('id') == 'telefoneCelular') {
+            let invalid = validaTelefoneCelular($(this).val());
+            if (!!(invalid)) {
+                $('#telefoneCelular-error').css('display', 'block');
+                $('#telefoneCelular-error').html(invalid)
+            }
+        }
         validator.element($(this))
     })
 
-    servicosSlick();
 
     $('.header__navigation-link').on('click', function () {
         let sectionId = $(this).data('sectionid');
@@ -68,17 +78,89 @@ $(document).ready(function () {
         closeModal();
     });
 
-    $('.galeria-item').on('click', function () {
+    $('.galeria-item:not(.galeria-item-video)').each(function (i, el) {
+        $(this).attr('data-slick', i)
+    })
+
+
+    $('.galeria-item:not(.galeria-item-video)').on('click', function () {
         openModal();
-        $('.modal-inner').html($(this).html());
+        let slickItem = $(this).data('slick');
+        $('.modal-galeria').slick('slickGoTo', slickItem);
     });
 
     setClientesAnimation();
     setInterval(() => {
         setClientesAnimation();
-    }, 2000);
+    }, 5000);
 
 
+
+    servicosSlider();
+    bannerSlider();
+    modalSlider();
+    atuacaoSlider();
+    dotsSlider();
+
+
+    setTimeout(() => {
+        NProgress.done();
+        $('.loading').remove();
+    }, 300);
+
+    $(window).on('resize', function (e) {
+        var size = 250 + (1500 - 250) * (($(window).width - 500) / (1920 - 500));
+        $('.clientes').css({
+            'transform': `scaleX(${size})`
+        });
+        
+
+    servicosSlider();
+    bannerSlider();
+    modalSlider();
+    atuacaoSlider();
+    dotsSlider();
+    })
+
+});
+
+function bannerSlider() {
+    try {
+        $('.banner__slider').slick('unslick');
+    } catch (e) { }
+    $('.banner__slider').slick({
+        arrows: true,
+        dots: false,
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+}
+
+function modalSlider() {
+    try {
+        $('.modal-galeria').slick('unslick');
+    } catch (e) { }
+    $('.modal-galeria').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        variableWidth: true,
+        adaptiveHeight: true,
+        speed: 600
+    });
+}
+
+function atuacaoSlider() {
+    try {
+        $('.atuacao-slider').unbind('afterChange');
+        $('.atuacao-slider').slick('unslick');
+    } catch (e) {
+
+    }
     $('.atuacao-slider').slick({
         arrows: true,
         dots: true,
@@ -87,21 +169,54 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
+        adaptiveHeight: true,
     });
 
-    $('.atuacao-slider').on('afterChange', function () {
-        if ($(window).width() > 800) {
+    $('.atuacao-slider').on('afterChange', function (slick, current) {
             var dotAtivo = $('.atuacao-slider .slick-dots li.slick-active').offset().left;
             var dotsList = $('.atuacao-slider .slick-dots').offset().left;
-
             var positionList = dotAtivo - dotsList;
-
             $('.atuacao-slider .slick-dots').css('transform', 'translateX(-' + positionList + 'px)');
+    });
+}
+
+function setSlickItemVisible(slickParent, currentSlide) {
+    let prev = $(currentSlide.$slides[currentSlide.currentSlide - 1]) // prev
+    let current = $(currentSlide.$slides).eq(currentSlide.currentSlide) // current
+    let next = $(currentSlide.$slides).eq(currentSlide.currentSlide + 1) // next
+    
+    current.addClass('show')
+
+    if ($(window).width() >= 600) {
+        next.addClass('show');
+        if ($(window).width() > 900)
+            prev.addClass('show');
+    }
+   
+    $(currentSlide.$slides).not(prev).not(current).not(next).removeClass('show');
+
+    $(currentSlide.$slides).each(function (index, el) {
+        if (index != currentSlide.currentSlide - 1
+            && index != currentSlide.currentSlide + 1
+            && index != currentSlide.currentSlide) {
         }
     });
-    
-    dotsSlider();
-});
+}
+
+function validaTelefoneCelular(val) {
+    console.log(val, val.length);
+    if (!val.trim()) {
+        return 'Esse campo é obrigatório';
+    }
+    else if (val.trim() == '(') {
+        return 'Esse campo é obrigatório';
+    }
+    else if (val.trim().length < 14) {
+        return 'Telefone/Celular inválido';
+    }
+
+    return '';
+}
 
 function setHeaderScroll() {
     if (window.navigator.brave) {
@@ -122,15 +237,14 @@ function dotsSlider() {
     $('.atuacao-slider .slick-dots li:nth-child(4) button').html('<img src="./assets/img/icon-slide-eletrica.png" />')
     $('.atuacao-slider .slick-dots li:nth-child(5) button').html('<img src="./assets/img/icon-slide-civil.png" />')
     $('.atuacao-slider .slick-dots li:nth-child(6) button').html('<img src="./assets/img/icon-slide-projetos.png" />')
-   
+
 }
 
-function servicosSlick() {
+function servicosSlider() {
     try {
-        
-    $('.servicos-nav').slick('unslick')
-    $('.servicos-for').slick('unslick')
-    } catch(e) {
+        $('.servicos-nav').slick('unslick');
+        $('.servicos-for').slick('unslick');
+    } catch (e) {
 
     }
     // Serviços
@@ -138,57 +252,28 @@ function servicosSlick() {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        infinite: true,
+        infinite: false,
         fade: true,
         asNavFor: '.servicos-nav'
     });
-
     $('.servicos-nav').slick({
-        slidesToShow: 3,
+        slidesToShow: $(window).width() > 900 ? 3 : $(window).width() < 600 ? 1 : 2,
         slidesToScroll: 1,
         asNavFor: '.servicos-for',
         dots: true,
-        centerMode: true,
-        variableWidth: true,
-        focusOnSelect: true,
-        infinite: true,
-        mobileFirst: true,//add this one
-        responsive: [
-            {
-                breakpoint: 1000,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    centerMode: true,
-                    variableWidth: true,
-                }
-            },
-            {
-                breakpoint: 900,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                    variableWidth: false,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                    variableWidth: false,
-                }
-            },
-        ]
+        infinite: false,
+        autoplay: true,
+        autoplaySpeed: 100000,
+        centerMode: $(window).width() > 900,
+        variableWidth: $(window).width() > 900,
+    });
+    $('.servicos-nav').on('init', function (slick, currentSlide) {
+        setSlickItemVisible(slick, currentSlide)
+    });
+    $('.servicos-nav').on('afterChange', function (slick, currentSlide) {
+        setSlickItemVisible(slick, currentSlide)
     });
 
-    // $('.btn-mobile').on('click', function(e) {
-    //     e.preventDefault();
-    //     console.log('oi')
-    //     $('.header').toggleClass('toggle');
-    // })
 }
 
 function toggleHeaderNavigation() {
@@ -198,12 +283,13 @@ function toggleHeaderNavigation() {
 }
 
 function setClientesAnimation() {
-    let clientes = $('.cliente-item[position]')
-    clientes.each(function () {
+    let p = []
+    $('.cliente-item[position]').each(function () {
         let position = parseInt($(this).attr('position'))
+        let newPosition = position >= $('.cliente-item[position]').length - 1 ? 0 : position + 1;
         let img = $(this).find('.cliente-item-img')
-        if (img) {
-            let newPosition = position >= 15 ? 0 : position + 1;
+        if (img.length > 0) {
+            p.push(newPosition)
             setTimeout(() => {
                 let next = $(`.cliente-item[position=${newPosition}]`);
                 next.html(img);
@@ -226,9 +312,9 @@ function goToSection(sectionId) {
     if ($(sectionId).length > 0) {
         localStorage.setItem('sectionId', sectionId)
         let position = $(sectionId).offset().top;
-        let newPosition = sectionId == '#atuacao' ? 
-                position : position - 60 < 0 ? 
-                    0 : position - 60;
+        let newPosition = sectionId == '#atuacao' ?
+            position : position - 60 < 0 ?
+                0 : position - 60;
         $("html, body").stop().animate({
             scrollTop: newPosition
         }, 500);

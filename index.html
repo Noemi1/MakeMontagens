@@ -7,7 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Make Montagens</title>
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jquery form -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+    <!-- jquery validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.js"></script>
+    <!-- jquery mask -->
+    <script src="./assets/libs/jquery-mask/jquery.mask.js"></script>
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -15,8 +23,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!-- nprogress -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" integrity="sha512-42kB9yDlYiCEfx2xVwq0q7hT4uf26FUgSIZBK8uiaEnTdShXjwr8Ip1V4xGJMg3mHkUt9nNuTDxunHF0/EgxLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js" integrity="sha512-bUg5gaqBVaXIJNuebamJ6uex//mjxPk8kljQTdM1SwkNrQD7pjS+PerntUSD+QRWPNJ0tq54/x4zRV8bLrLhZg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./assets/libs/nprogress/nprogress.css" />
+    <script src="./assets/libs/nprogress/nprogress.min.js"></script>
     <!-- slick -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
@@ -24,11 +32,9 @@
     <!-- aos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- jquery validation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.js"></script>
-    <!-- jquery mask -->
-    <script src="./assets/libs/jquery-mask/jquery.mask.js"></script>
+    <!-- Toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- site -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
@@ -37,6 +43,10 @@
 </head>
 
 <body>
+    <div class="loading">
+        <img src="./assets/img/logo-icon-white.png" alt="Logo Make Montagens">
+        <p>Carregando...</p>
+    </div>
     <header class="header">
         <button class="btn btn-mobile" onclick="toggleHeaderNavigation()"><span></span><span></span><span></span></button>
         <div class="wrapper">
@@ -180,7 +190,7 @@
                                 <div class="card-title">Metálica</div>
                                 <div class="card-text">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque est placeat optio incidunt distinctio harum obcaecati ipsum saepe magni tenetur, velit perferendis vero, assumenda quibusdam rerum voluptas? Ullam, dolor error?</p>
-                                    <a href="./metalica.html" class="link">MAIS</a>
+                                    <a href="./metalica.html" class="link">VER MAIS</a>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +202,7 @@
                                 <div class="card-title">Tubulação e Mecânica</div>
                                 <div class="card-text">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque est placeat optio incidunt distinctio harum obcaecati ipsum saepe magni tenetur, velit perferendis vero, assumenda quibusdam rerum voluptas? Ullam, dolor error?</p>
-                                    <a href="./tubulacao-e-mecanica.html" class="link">MAIS</a>
+                                    <a href="./tubulacao-e-mecanica.html" class="link">VER MAIS</a>
                                 </div>
                             </div>
                         </div>
@@ -204,7 +214,7 @@
                                 <div class="card-title">Elétrica</div>
                                 <div class="card-text">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque est placeat optio incidunt distinctio harum obcaecati ipsum saepe magni tenetur, velit perferendis vero, assumenda quibusdam rerum voluptas? Ullam, dolor error?</p>
-                                    <a href="./eletrica.html" class="link">MAIS</a>
+                                    <a href="./eletrica.html" class="link">VER MAIS</a>
                                 </div>
                             </div>
                         </div>
@@ -216,7 +226,7 @@
                                 <div class="card-title">Contrução Civil</div>
                                 <div class="card-text">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque est placeat optio incidunt distinctio harum obcaecati ipsum saepe magni tenetur, velit perferendis vero, assumenda quibusdam rerum voluptas? Ullam, dolor error?</p>
-                                    <a href="./construcao-civil.html" class="link">MAIS</a>
+                                    <a href="./construcao-civil.html" class="link">VER MAIS</a>
                                 </div>
                             </div>
                         </div>
@@ -228,7 +238,7 @@
                                 <div class="card-title">Projetos Industriais</div>
                                 <div class="card-text">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque est placeat optio incidunt distinctio harum obcaecati ipsum saepe magni tenetur, velit perferendis vero, assumenda quibusdam rerum voluptas? Ullam, dolor error?</p>
-                                    <a href="./projetos-industriais.html" class="link">MAIS</a>
+                                    <a href="./projetos-industriais.html" class="link">VER MAIS</a>
                                 </div>
                             </div>
                         </div>
@@ -237,10 +247,10 @@
             </div>
         </section>
         <section class="" id="atuacao">
-            <div class="atuacao-slider">
+            <div class="atuacao-slider bg-dark">
                 <div class="atuacao-slider-item slide-1">
                     <div class="atuacao-item-bg"></div>
-                    <div class=" d-flex justify-content-center align-items-center align-content-center flex-wrap h-100 px-5">
+                    <div class=" d-flex justify-content-center align-items-center align-content-center flex-wrap px-4">
                         <div class="atuacao-item-img">
                             <img src="./assets/img/logo-icon-white.png" alt="Logo" class="logo">
                         </div>
@@ -255,18 +265,18 @@
                     </div>
                 </div>
                 <div class="atuacao-slider-item slide-2">
-                    <div class="w-100 h-100 d-flex">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="d-flex flex-md-nowrap flex-wrap atuacao-text">
+                        <div class="col-xl-6 col-lg-6 col-md-4 col-sm-4 col-12">
                             <div class="atuacao-slider-item-img" style="background-image: url(./assets/img/atuacao-metalica.jpg);"></div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center bg-dark ">
+                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-12 d-flex align-items-center bg-dark py-4 px-3">
                             <div class="atuacao-slider-item-text text-white">
-                                <h3 class="mb-0" data-aos="fade-right">Metálica</h3>
-                                <hr class="border-bottom border-warning rounded col-1 mt-2 mb-2" data-aos="fade-right">
-                                <p data-aos="fade-right" class="text-thin">Estrutura metálica – Projeto detalhado para fabricação;</p>
-                                <p data-aos="fade-right" class="text-thin">Memorial de cálculo estrutural por elementos finitos;</p>
-                                <p data-aos="fade-right" class="text-thin">Fornecimento, Fabricação e montagem de estruturas metálicas.</p>
-                                <p data-aos="fade-right">                                    
+                                <h3 class="mb-0">Metálica</h3>
+                                <hr class="border-bottom border-warning rounded col-1 mt-2 mb-2">
+                                <p class="text-thin">Estrutura metálica – Projeto detalhado para fabricação;</p>
+                                <p class="text-thin">Memorial de cálculo estrutural por elementos finitos;</p>
+                                <p class="text-thin">Fornecimento, Fabricação e montagem de estruturas metálicas.</p>
+                                <p>                                    
                                     <a href="./metalica.html" class="btn btn-rounded border-warning mt-3"><small>VER MAIS</small></a>
                                 </p>
                             </div>
@@ -274,70 +284,76 @@
                     </div>
                 </div>
                 <div class="atuacao-slider-item slide-3">
-                    <div class="w-100 h-100 d-flex">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center bg-dark">
-                            <div class="atuacao-slider-item-text d-flex flex-column align-items-end text-white text-end">
-                                <h3 class="mb-0" data-aos="fade-left">Tubulação e Mecânica</h3>
-                                <hr class="border-bottom border-warning rounded col-1 mt-2 mb-2 ml-auto" data-aos="fade-left">
-                                <p data-aos="fade-left" class="text-thin">Layout de novas unidades produtivas;</p>
-                                <p data-aos="fade-left" class="text-thin">Instalação, remoção e reforma de equipamentos;</p>
-                                <p data-aos="fade-left" class="text-thin">Gestão global de manutenção;</p>
-                                <p data-aos="fade-left" class="text-thin">Gerenciamento de parada de manutenção;</p>
-                                <p data-aos="fade-left" class="text-thin">Implantação do projeto de melhoria de equipamentos;</p>
-                                <p data-aos="fade-left" class="text-thin">Manutenção corretiva, preventiva e preditiva;</p>
-                                <p data-aos="fade-left" class="text-thin">Planejamento e programação dos serviços de manutenção;</p>
-                                <p data-aos="fade-left" class="text-thin">Análise de flexibilidade;</p>
-                                <p data-aos="fade-left" class="text-thin">Projeto detalhado de tubulação;</p>
-                                <p data-aos="fade-left" class="text-thin">Fabricação, montagem, inspeção e T.H.</p>
-                                <p data-aos="fade-left">                                    
+                    <div class="d-flex flex-wrap atuacao-text">
+                        <div class="col-xl-6 col-lg-6 col-md-4 col-sm-4 col-12 d-md-none d-block">
+                            <div class="atuacao-slider-item-img" style="background-image: url(./assets/img/atuacao-tubulacao.jpg);"></div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-12 d-flex align-items-center bg-dark py-4 px-3">
+                            <div class="atuacao-slider-item-text d-flex flex-column align-items-end text-end text-white">
+                                <h3 class="mb-0">Tubulação e Mecânica</h3>
+                                <hr class="border-bottom border-warning rounded col-1 mt-2 mb-2 ml-auto">
+                                <p class="text-thin">Layout de novas unidades produtivas;</p>
+                                <p class="text-thin">Instalação, remoção e reforma de equipamentos;</p>
+                                <p class="text-thin">Gestão global de manutenção;</p>
+                                <p class="text-thin">Gerenciamento de parada de manutenção;</p>
+                                <p class="text-thin">Implantação do projeto de melhoria de equipamentos;</p>
+                                <p class="text-thin">Manutenção corretiva, preventiva e preditiva;</p>
+                                <p class="text-thin">Planejamento e programação dos serviços de manutenção;</p>
+                                <p class="text-thin">Análise de flexibilidade;</p>
+                                <p class="text-thin">Projeto detalhado de tubulação;</p>
+                                <p class="text-thin">Fabricação, montagem, inspeção e T.H.</p>
+                                <p>                                    
                                     <a href="./tubulacao-e-mecanica.html" class="btn btn-rounded border-warning mt-3"><small>VER MAIS</small></a>
                                 </p>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="col-xl-6 col-lg-6 col-md-4 col-sm-4 col-12 d-md-block d-none">
                             <div class="atuacao-slider-item-img" style="background-image: url(./assets/img/atuacao-tubulacao.jpg);"></div>
                         </div>
                     </div>
                 </div>
                 <div class="atuacao-slider-item slide-4">
-                    <div class="w-100 h-100 d-flex">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center bg-dark">
-                            <div class="atuacao-slider-item-text d-flex flex-column align-items-end text-end text-white text-thin">
-                                <h3 class="mb-0 " data-aos="fade-left">Elétrica</h3>
-                                <hr class="border-bottom border-warning rounded col-1 mt-2 mb-2 ml-auto" data-aos="fade-left">
-                                <p data-aos="fade-right">Subestações de alta, media e baixa tensão;</p>
-                                <p data-aos="fade-right">Quadros de distribuição;</p>
-                                <p data-aos="fade-right">Centro de controle de motores;</p>
-                                <p data-aos="fade-right">Sistema de automação industrial;</p>
-                                <p data-aos="fade-right">Sistema auxiliar de controle;</p>
-                                <p data-aos="fade-right">Instalação de sistemas iluminação e tomadas, aterramento e SPDA;</p>
-                                <p data-aos="fade-right">Arquitetura de rede para motores elétricos;</p>
-                                <p data-aos="fade-right">Comandos e CLPs.</p>
-                                <p data-aos="fade-right">                                    
+                    <div class="d-flex flex-wrap atuacao-text">
+                        <div class="col-xl-6 col-lg-6 col-md-4 col-sm-4 col-12 d-md-none d-block">
+                            <div class="atuacao-slider-item-img" style="background-image: url(./assets/img/atuacao-eletrica.jpg);"></div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-12 d-flex align-items-center bg-dark py-4 px-3">
+                            <div class="atuacao-slider-item-text d-flex flex-column align-items-end text-end text-white">
+                                <h3 class="mb-0 ">Elétrica</h3>
+                                <hr class="border-bottom border-warning rounded col-1 mt-2 mb-2 ml-auto">
+                                <p class="text-thin">Subestações de alta, media e baixa tensão;</p>
+                                <p class="text-thin">Quadros de distribuição;</p>
+                                <p class="text-thin">Centro de controle de motores;</p>
+                                <p class="text-thin">Sistema de automação industrial;</p>
+                                <p class="text-thin">Sistema auxiliar de controle;</p>
+                                <p class="text-thin">Instalação de sistemas iluminação e tomadas, aterramento e SPDA;</p>
+                                <p class="text-thin">Arquitetura de rede para motores elétricos;</p>
+                                <p class="text-thin">Comandos e CLPs.</p>
+                                <p>                                    
                                     <a href="./eletrica.html" class="btn btn-rounded border-warning mt-3"><small>VER MAIS</small></a>
                                 </p>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="col-xl-6 col-lg-6 col-md-4 col-sm-4 col-12 d-md-block d-none">
                             <div class="atuacao-slider-item-img" style="background-image: url(./assets/img/atuacao-eletrica.jpg);"></div>
                         </div>
                     </div>
                 </div>
                 <div class="atuacao-slider-item slide-5">
-                    <div class="w-100 h-100 d-flex">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="d-flex flex-wrap atuacao-text">
+                        <div class="col-xl-6 col-lg-6 col-md-4 col-sm-4 col-12">
                             <div class="atuacao-slider-item-img" style="background-image: url(./assets/img/atuacao-civil.jpg);"></div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center bg-dark text-white text-thin">
-                            <div class="atuacao-slider-item-text">
-                                <h3 class="mb-0" data-aos="fade-right">Construção Civil</h3>
-                                <hr class="border-bottom border-warning rounded col-1 mt-2 mb-2" data-aos="fade-right">
-                                <p data-aos="fade-right">Adequações, recuperações, reforços e construções novas;</p>
-                                <p data-aos="fade-right">Alvenaria, revestimentos e impermeabilizações;</p>
-                                <p data-aos="fade-right">Dimensionamento estrutural (concreto Armado e Aço);</p>
-                                <p data-aos="fade-right">Estrutura de concreto armado – Projeto detalhado de peças e armadura;</p>
-                                <p data-aos="fade-right">Desenvolvimento de layouts em geral.</p>
-                                <p data-aos="fade-right">                                    
+                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-12 d-flex align-items-center bg-dark py-4 px-3">
+                            <div class="atuacao-slider-item-text text-white">
+                                <h3 class="mb-0">Construção Civil</h3>
+                                <hr class="border-bottom border-warning rounded col-1 mt-2 mb-2">
+                                <p class="text-thin">Adequações, recuperações, reforços e construções novas;</p>
+                                <p class="text-thin">Alvenaria, revestimentos e impermeabilizações;</p>
+                                <p class="text-thin">Dimensionamento estrutural (concreto Armado e Aço);</p>
+                                <p class="text-thin">Estrutura de concreto armado – Projeto detalhado de peças e armadura;</p>
+                                <p class="text-thin">Desenvolvimento de layouts em geral.</p>
+                                <p>                                    
                                     <a href="./construcao-civil.html" class="btn btn-rounded border-warning mt-3"><small>VER MAIS</small></a>
                                 </p>
                             </div>
@@ -345,20 +361,20 @@
                     </div>
                 </div>
                 <div class="atuacao-slider-item slide-6">
-                    <div class="w-100 h-100 d-flex">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="d-flex flex-wrap atuacao-text">
+                        <div class="col-xl-6 col-lg-6 col-md-4 col-sm-4 col-12">
                             <div class="atuacao-slider-item-img" style="background-image: url(./assets/img/atuacao-projetos.jpg);"></div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center bg-dark  text-white text-thin">
-                            <div class="atuacao-slider-item-text">
-                                <h3 class="mb-0" data-aos="fade-right">Projetos Industriais</h3>
-                                <hr class="border-bottom border-warning rounded col-1 mt-2 mb-2" data-aos="fade-right">
-                                <p data-aos="fade-right">Elaboração de Projetos Industriais;</p>
-                                <p data-aos="fade-right">Ampliações e Adequação de Sites;</p>
-                                <p data-aos="fade-right">Elaboração de Maquetes Eletrônicas;</p>
-                                <p data-aos="fade-right">Criação de Vídeos Institucionais;</p>
-                                <p data-aos="fade-right">Renderização de Vídeos e Imagens Realistas.</p>
-                                <p data-aos="fade-right">                                    
+                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-12 d-flex align-items-center bg-dark py-4 px-3">
+                            <div class="atuacao-slider-item-text text-white">
+                                <h3 class="mb-0">Projetos Industriais</h3>
+                                <hr class="border-bottom border-warning rounded col-1 mt-2 mb-2">
+                                <p class="text-thin">Elaboração de Projetos Industriais;</p>
+                                <p class="text-thin">Ampliações e Adequação de Sites;</p>
+                                <p class="text-thin">Elaboração de Maquetes Eletrônicas;</p>
+                                <p class="text-thin">Criação de Vídeos Institucionais;</p>
+                                <p class="text-thin">Renderização de Vídeos e Imagens Realistas.</p>
+                                <p>                                    
                                     <a href="./projetos-industriais.html" class="btn btn-rounded border-warning mt-3"><small>VER MAIS</small></a>
                                 </p>
                             </div>
@@ -367,7 +383,7 @@
                 </div>
             </div>
         </section>
-        <section class="" id="clientes">
+        <section class="bg-white pb-3" id="clientes">
             <div class="bg-dark content">
                 <div class="wrapper">
                     <h3 class="section-title mt-lg-0 mt-4 text-white text-center" data-aos="fade-down">Nossos clientes</h3>
@@ -375,34 +391,52 @@
                 </div>
             </div>
             <div class="wrapper">
-                <div class="clientes my-0 mb-3">
+                <div class="clientes my-0">
                     <div class="row" row="1">
                         <div class="cliente-item col-2" position="0">
-                            <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/clientes-logo-cba.png);"></div>
+                            <div class="cliente-item-img cliente-logo-animation">
+                                <!-- style="background-image: url(./assets/img/clientes-logo-cba.png);" -->
+                                <img src="./assets/img/clientes/clientes-logo-cba.png" alt="">
+                            </div>
                         </div>
                         <div class="cliente-item col-2" position="1">
-                            <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/clientes-logo-cristalia-azul.png);"></div>
+                            <div class="cliente-item-img cliente-logo-animation">
+                                <!-- style="background-image: url(./assets/img/clientes-logo-cristalia-azul.png);" -->
+                                <img src="./assets/img/clientes/clientes-logo-cristalia-azul.png" alt="">
+                            </div>
                         </div>
                         <div class="cliente-item col-2" position="2">
-                            <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/clientes-logo-elekeiroz.png);"></div>
+                            <div class="cliente-item-img cliente-logo-animation">
+                                <!-- style="background-image: url(./assets/img/clientes-logo-elekeiroz.png);" -->
+                                <img src="./assets/img/clientes/clientes-logo-elekeiroz.png" alt="">
+                            </div>
                         </div>
                         <div class="cliente-item col-2" position="3">
-                            <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/clientes-logo-massaleve.png);"></div>
+                            <div class="cliente-item-img cliente-logo-animation">
+                                <!-- style="background-image: url(./assets/img/clientes-logo-massaleve.png);" -->
+                                <img src="./assets/img/clientes/clientes-logo-massaleve.png" alt="">
+                            </div>
                         </div>
                         <div class="cliente-item col-2" position="4">
-                            <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/clientes-logo-mondelez.png);"></div>
+                            <div class="cliente-item-img cliente-logo-animation">
+                                <!-- style="background-image: url(./assets/img/clientes-logo-mondelez.png);" -->
+                                <img src="./assets/img/clientes/clientes-logo-mondelez.png" alt="">
+                            </div>
                         </div>
                         <div class="cliente-item col-2" position="5">
-                            <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/clientes-logo-seara.png);"></div>
+                            <div class="cliente-item-img cliente-logo-animation">
+                                <!-- style="background-image: url(./assets/img/clientes-logo-seara.png);" -->
+                                <img src="./assets/img/clientes/clientes-logo-seara.png" alt="">
+                            </div>
                         </div>
                     </div>
                     <div class="row" row="2">
                         <div class="col-2">
-                            <div class="cliente-item w-100" position="15">
-                                <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/logo.png);"></div>
-                            </div>
-                            <div class="cliente-item w-100" position="14">
-                                <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/logo.png);"></div>
+                            <div class="cliente-item w-100" position="13">
+                                <div class="cliente-item-img cliente-logo-animation">
+                                    <!-- style="background-image: url(./assets/img/logo.png);" -->
+                                    <img src="./assets/img/clientes/clientes-logo-make-montagens.png" alt="">
+                                </div>
                             </div>
                         </div>
                         <div class="col-8 cliente-item-center">
@@ -416,39 +450,62 @@
                             </div>
                         </div>
                         <div class="col-2">
+                            <!-- <div class="cliente-item w-100" position="6">
+                                <div class="cliente-item-img cliente-logo-animation">
+                                    <img src="./assets/img/clientes/clientes-logo-mariol.png" alt="">
+                                </div>
+                            </div> -->
                             <div class="cliente-item w-100" position="6">
-                                <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/clientes-logo-mariol.png);"></div>
-                            </div>
-                            <div class="cliente-item w-100" position="7">
-                                <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/clientes-logo-mariol.png);"></div>
+                                <div class="cliente-item-img cliente-logo-animation">
+                                    <!-- style="background-image: url(./assets/img/clientes-logo-mariol.png);" -->
+                                    <img src="./assets/img/clientes/clientes-logo-mariol.png" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="cliente-item col-2" position="13">
-                            <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/clientes-logo-jbs-red.png);"></div>
-                        </div>
                         <div class="cliente-item col-2" position="12">
-                            <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/clientes-logo-placo-saint-gobain.png);"></div>
+                            <div class="cliente-item-img cliente-logo-animation">
+                                <!-- style="background-image: url(./assets/img/clientes-logo-jbs-red.png);" -->
+                                <img src="./assets/img/clientes/clientes-logo-jbs-red.png" alt="">
+                            </div>
                         </div>
                         <div class="cliente-item col-2" position="11">
-                            <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/clientes-logo-nitroquimica.png);"></div>
+                            <div class="cliente-item-img cliente-logo-animation">
+                                <!-- style="background-image: url(./assets/img/clientes-logo-placo-saint-gobain.png);" -->
+                                <img src="./assets/img/clientes/clientes-logo-placo-saint-gobain.png" alt="">
+                            </div>
                         </div>
                         <div class="cliente-item col-2" position="10">
-                            <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/clientes-logo-nestle.png);"></div>
+                            <div class="cliente-item-img cliente-logo-animation">
+                                <!-- style="background-image: url(./assets/img/clientes-logo-nitroquimica.png);" -->
+                                <img src="./assets/img/clientes/clientes-logo-nitroquimica.png" alt="">
+                            </div>
                         </div>
                         <div class="cliente-item col-2" position="9">
-                            <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/clientes-logo-nadir.png);"></div>
+                            <div class="cliente-item-img cliente-logo-animation">
+                                <!-- style="background-image: url(./assets/img/clientes-logo-nestle.png);" -->
+                                <img src="./assets/img/clientes/clientes-logo-nestle.png" alt="">
+                            </div>
                         </div>
                         <div class="cliente-item col-2" position="8">
-                            <div class="cliente-item-img cliente-logo-animation" style="background-image: url(./assets/img/clientes-logo-ubv.png);"></div>
+                            <div class="cliente-item-img cliente-logo-animation">
+                                <!-- style="background-image: url(./assets/img/clientes-logo-nadir.png);" -->
+                                <img src="./assets/img/clientes/clientes-logo-nadir.png" alt="">
+                            </div>
+                        </div>
+                        <div class="cliente-item col-2" position="7">
+                            <div class="cliente-item-img cliente-logo-animation">
+                                <!-- style="background-image: url(./assets/img/clientes-logo-ubv.png);" -->
+                                <img src="./assets/img/clientes/clientes-logo-ubv.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="d-flex flex-wrap align-items-stretch" id="contato" data-aos="fade-down">
-            <form class="contato_form col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 px-5 bg-light py-4">
+            <form id="contactForm" class="contato_form col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 px-4 bg-light py-4">
                 <h3 class="section-title mb-0 pb-0">Fale conosco</h3>
                 <p class="mb-0 text-font-light">Escreva sua mensagem para falar conosco. Entraremos em contato pelo email ou telefone cadastrados abaixo.</p>
                 <hr class="border-bottom border-warning rounded col-1 mb-4">
@@ -509,11 +566,11 @@
                 <div class="form-row mb-4">
                     <p class="text-danger col-12 px-2 mb-2" id="error-message"><small></small></p>
                     <div class="form-group col-lg-12 col-md-12 col-sm-12 col-12">
-                        <button type="submit" class="btn btn-rounded btn-rounded-yellow btn-rounded-dark w-100 py-2">Enviar mensagem</button>
+                        <button type="submit" id="sendFormContato" class="btn btn-rounded btn-rounded-yellow btn-rounded-dark w-100 py-2">Enviar mensagem</button>
                     </div>
                 </div>
             </form>
-            <div class="contato_mapa col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="contato_mapa col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0749202843103!2d-46.4819945!3d-23.4938108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6055c4cf3ccd%3A0xc95bab663343e814!2sAv.%20Boturussu%2C%201750%20-%20Parque%20Boturussu%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003802-010!5e0!3m2!1spt-BR!2sbr!4v1672838419734!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
@@ -531,7 +588,9 @@
                     </p>
                 </div>
                 <div class="footer-map col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3557157109594!2d-46.6079576!3d-23.591572399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bebffc7a77d%3A0xed2ddd6dc6f98e22!2sR.%20Xavier%20de%20Almeida%20-%20Ipiranga%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1672804691472!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3557157109594!2d-46.6079576!3d-23.591572399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bebffc7a77d%3A0xed2ddd6dc6f98e22!2sR.%20Xavier%20de%20Almeida%20-%20Ipiranga%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1672804691472!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0749202843103!2d-46.4819945!3d-23.4938108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6055c4cf3ccd%3A0xc95bab663343e814!2sAv.%20Boturussu%2C%201750%20-%20Parque%20Boturussu%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003802-010!5e0!3m2!1spt-BR!2sbr!4v1678124174442!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="footer-media d-flex flex-column col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 my-auto">
                     <a href="tel:+551125453836">
@@ -564,6 +623,7 @@
             </div>
         </div>
     </footer>
+
     <a class="btn btn-scroll-top">
         <i class="fa fa-chevron-up"></i>
     </a>
